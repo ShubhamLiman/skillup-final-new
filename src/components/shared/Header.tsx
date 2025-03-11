@@ -52,13 +52,15 @@ const Header = () => {
         } w-full h-20 px-8 py-2`}
       >
         <div className="w-full flex items-center justify-between h-full">
-          <div className="lg:h-[55px] h-[31px] lg:w-[277.72px] w-[159px] object-cover">
-            <img
-              src="/src/assets/image.png"
-              alt="Skillup logo"
-              className="lg:h-[55px] h-[31px] aspect-auto"
-            />
-          </div>
+          <Link to={"/"}>
+            <div className="lg:h-[55px] h-[31px] lg:w-[277.72px] w-[159px] object-cover">
+              <img
+                src="/src/assets/image.png"
+                alt="Skillup logo"
+                className="lg:h-[55px] h-[31px] aspect-auto"
+              />
+            </div>
+          </Link>
           <div className="w-full h-full hidden lg:flex items-center justify-end gap-6 px-4 text-base">
             {headerNavigationLinks.map((link, i) => {
               if (link.link)
