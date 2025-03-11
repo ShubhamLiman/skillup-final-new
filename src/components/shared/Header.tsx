@@ -49,16 +49,16 @@ const Header = () => {
           isSticky
             ? "fixed top-0 left-0 w-full bg-white shadow-lg z-[70]"
             : "relative"
-        } w-full h-20 px-8 py-2`}>
+        } w-full h-20 px-8 py-2`}
+      >
         <div className="w-full flex items-center justify-between h-full">
-          <Link to={"/"}  className="w-full cursor-pointer">
-            <h1 className="font-semibold text-xl lg:text-4xl text-green-primary">
-              Skillup
-            </h1>
-            <p className="font-base text-xs text-green-primary tracking-wide">
-              An initiative By Hubnex Labs
-            </p>
-          </Link>
+          <div className="lg:h-[55px] h-[31px] lg:w-[277.72px] w-[159px] object-cover">
+            <img
+              src="/src/assets/image.png"
+              alt="Skillup logo"
+              className="lg:h-[55px] h-[31px] aspect-auto"
+            />
+          </div>
           <div className="w-full h-full hidden lg:flex items-center justify-end gap-6 px-4 text-base">
             {headerNavigationLinks.map((link, i) => {
               if (link.link)
@@ -72,7 +72,8 @@ const Header = () => {
                       }  `
                     }
                     to={link.link}
-                    key={link.label}>
+                    key={link.label}
+                  >
                     {link.label}
                   </NavLink>
                 );
@@ -81,7 +82,8 @@ const Header = () => {
                   <li
                     key={i}
                     className="list-none cursor-pointer"
-                    onClick={() => handleNavigation(link.section || "")}>
+                    onClick={() => handleNavigation(link.section || "")}
+                  >
                     {link.label}
                   </li>
                 );
@@ -123,7 +125,8 @@ const Header = () => {
                     return (
                       <DropdownMenuItem
                         key={i}
-                        onClick={() => handleMenuClick(link.section || "")}>
+                        onClick={() => handleMenuClick(link.section || "")}
+                      >
                         <li key={i} className="list-none cursor-pointer">
                           {link.label}
                         </li>
