@@ -1,5 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { headerNavigationLinks } from "../../constants";
+import skilluplogo from "../../assets/image.png";
 import Button from "../custom/Button";
 import {
   DropdownMenu,
@@ -55,7 +56,7 @@ const Header = () => {
           <Link to={"/"}>
             <div className="lg:h-[55px] h-[31px] lg:w-[277.72px] w-[159px] object-cover">
               <img
-                src="/src/assets/image.png"
+                src={skilluplogo}
                 alt="Skillup logo"
                 className="lg:h-[55px] h-[31px] aspect-auto"
               />
